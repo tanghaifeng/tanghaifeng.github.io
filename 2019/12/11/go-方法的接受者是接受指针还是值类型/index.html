@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/12 | 蚂蚁上树-遥望天空</title>
+  <title>go方法接收者 | 蚂蚁上树-遥望天空</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="蚂蚁上树-遥望天空">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;12&#x2F;index.html">
+  <meta name="description" content="什么是go的方法方法其实就是给类型添加行为，方法也是函数，不过它在func和方法名之间增加了参数，我们称为方法的接受者，下面是定义方法， 1type User struct &amp;#123;2	Name string3	age  int4&amp;#125;56&amp;#x2F;&amp;#x2F; 方法，定义用户行为，(u User)是接收者7func (u User) changeAge(age int) &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="go方法接收者">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;go-%E6%96%B9%E6%B3%95%E7%9A%84%E6%8E%A5%E5%8F%97%E8%80%85%E6%98%AF%E6%8E%A5%E5%8F%97%E6%8C%87%E9%92%88%E8%BF%98%E6%98%AF%E5%80%BC%E7%B1%BB%E5%9E%8B&#x2F;index.html">
 <meta property="og:site_name" content="蚂蚁上树-遥望天空">
+<meta property="og:description" content="什么是go的方法方法其实就是给类型添加行为，方法也是函数，不过它在func和方法名之间增加了参数，我们称为方法的接受者，下面是定义方法， 1type User struct &amp;#123;2	Name string3	age  int4&amp;#125;56&amp;#x2F;&amp;#x2F; 方法，定义用户行为，(u User)是接收者7func (u User) changeAge(age int) &amp;#123;">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-11T05:35:37.546Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="蚂蚁上树-遥望天空" type="application/atom+xml">
@@ -153,37 +156,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-go-方法的接受者是接受指针还是值类型" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/11/go-%E6%96%B9%E6%B3%95%E7%9A%84%E6%8E%A5%E5%8F%97%E8%80%85%E6%98%AF%E6%8E%A5%E5%8F%97%E6%8C%87%E9%92%88%E8%BF%98%E6%98%AF%E5%80%BC%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
-  	<time datetime="2019-12-11T03:09:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-11</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/11/go-%E6%96%B9%E6%B3%95%E7%9A%84%E6%8E%A5%E5%8F%97%E8%80%85%E6%98%AF%E6%8E%A5%E5%8F%97%E6%8C%87%E9%92%88%E8%BF%98%E6%98%AF%E5%80%BC%E7%B1%BB%E5%9E%8B/">go方法接收者</a>
+    <h1 class="article-title" itemprop="name">
+      go方法接收者
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2019/12/11/go-%E6%96%B9%E6%B3%95%E7%9A%84%E6%8E%A5%E5%8F%97%E8%80%85%E6%98%AF%E6%8E%A5%E5%8F%97%E6%8C%87%E9%92%88%E8%BF%98%E6%98%AF%E5%80%BC%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2019-12-11T03:09:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="什么是go的方法"><a href="#什么是go的方法" class="headerlink" title="什么是go的方法"></a>什么是go的方法</h3><p>方法其实就是给类型添加行为，方法也是函数，不过它在func和方法名之间增加了参数，我们称为方法的接受者，下面是定义方法，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">type User struct &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	Name string</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	age  int</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 方法，定义用户行为，(u User)是接收者</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">func (u User) changeAge(age int) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	u.age &#x3D; age</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="接收者"><a href="#接收者" class="headerlink" title="接收者"></a>接收者</h3><p>接收者分为两种一种是上面例子的值接收者，还有一种是指针接收者：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 指针接收者</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">func (u *User) changeAge(age int) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	u.age &#x3D; age</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p>这里有两个点需要明白 一是：接收者接受的都是类型的副本，第二点也就是go的接收者都是值类型，即使是使用指针接收者本质也是值传递，只不过指针接收者是传递指针指向的类型副本的值，而值接收者是直接接受副本的值。</p>
+<h3 id="指针接收者"><a href="#指针接收者" class="headerlink" title="指针接收者"></a>指针接收者</h3><p>在64位机子上，指针是8个字节，所以接收者进行指针接受性能上是占绝对的优势的，如果直接进行值接收那么User中一个age 是int类型也就8个字节了，所以这是最直观的优势之一。   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">type User struct &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	Name string</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	age  int</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">func (u *User) changeAge(age int) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	u.age &#x3D; age</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	fmt.Print(u.age)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">func main() &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">	user :&#x3D; User&#123;&quot;Time&quot;,18&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">	user.changeAge(20)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p>看上面的代码可能有些疑惑，changeAge的接收者是指针啊，为什么我们在main函数中没有用&amp;进行指针操作呢，其实go内部帮我们做了这些事情</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">（&amp;user）.changeAge(20)</span></pre></td></tr></table></figure>
+<p>还有种写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">func main() &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	user :&#x3D; &amp;User&#123;&quot;Time&quot;,18&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	user.changeAge(20)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p>go 内部又帮我们做了工作：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">（*user）.changeAge(20)</span></pre></td></tr></table></figure>
+<p>这样做的好处就是不必要符合接收者的类型，方便开发者。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -196,93 +211,73 @@
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/08/%E5%BF%83%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E6%94%B6%E8%8E%B7%E5%B0%B1%E5%9C%A8%E5%93%AA%E9%87%8C/" class="archive-article-date">
-  	<time datetime="2019-12-08T14:11:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/08/%E5%BF%83%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E6%94%B6%E8%8E%B7%E5%B0%B1%E5%9C%A8%E5%93%AA%E9%87%8C/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">鞭策自己</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/08/%E5%BF%83%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E6%94%B6%E8%8E%B7%E5%B0%B1%E5%9C%A8%E5%93%AA%E9%87%8C/">鞭策自己</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/杂文//" class="article-tag-list-link color3">杂文</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/08/hello-world/" class="archive-article-date">
-  	<time datetime="2019-12-07T16:32:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-08</time>
-</a>
-        </div>
-    	 
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="go-方法的接受者是接受指针还是值类型" data-title="go方法接收者" data-url="http://yoursite.com/2019/12/11/go-%E6%96%B9%E6%B3%95%E7%9A%84%E6%8E%A5%E5%8F%97%E8%80%85%E6%98%AF%E6%8E%A5%E5%8F%97%E6%8C%87%E9%92%88%E8%BF%98%E6%98%AF%E5%80%BC%E7%B1%BB%E5%9E%8B/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/08/hello-world/">Hexo 建博客</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/杂文//" class="article-tag-list-link color3">杂文</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -305,8 +300,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

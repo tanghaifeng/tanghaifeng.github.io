@@ -6,16 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>gin初探 | 蚂蚁上树-遥望天空</title>
+  <title>Archives: 2020/5 | 蚂蚁上树-遥望天空</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一个程序一般写程序都是从hello world开始的，既然学习gin框架那么我也是从hello world开始，直接看下面的demo 1func main() &amp;#123;2	r :&amp;#x3D; gin.Default()3	r.GET(&amp;quot;&amp;#x2F;hello&amp;quot;, func(c *gin.Context) &amp;#123;4		c.JSON(http.StatusOK, gin">
-<meta property="og:type" content="article">
-<meta property="og:title" content="gin初探">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;18&#x2F;gin%E5%88%9D%E6%8E%A2&#x2F;index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="蚂蚁上树-遥望天空">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2020&#x2F;05&#x2F;index.html">
 <meta property="og:site_name" content="蚂蚁上树-遥望天空">
-<meta property="og:description" content="第一个程序一般写程序都是从hello world开始的，既然学习gin框架那么我也是从hello world开始，直接看下面的demo 1func main() &amp;#123;2	r :&amp;#x3D; gin.Default()3	r.GET(&amp;quot;&amp;#x2F;hello&amp;quot;, func(c *gin.Context) &amp;#123;4		c.JSON(http.StatusOK, gin">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-18T14:50:06.644Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="蚂蚁上树-遥望天空" type="application/atom+xml">
@@ -148,142 +145,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-gin初探" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      gin初探
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/05/12/%E5%81%9A%E6%80%9D%E6%83%B3%E4%B8%8A%E7%9A%84%E5%8B%A4%E5%A5%8B%E8%80%85/" class="archive-article-date">
+  	<time datetime="2020-05-12T02:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-12</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/05/12/%E5%81%9A%E6%80%9D%E6%83%B3%E4%B8%8A%E7%9A%84%E5%8B%A4%E5%A5%8B%E8%80%85/">稍微勤奋点</a>
     </h1>
   
 
-        
-        <a href="/2019/12/18/gin%E5%88%9D%E6%8E%A2/" class="archive-article-date">
-  	<time datetime="2019-12-18T14:49:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h2><p>一般写程序都是从hello world开始的，既然学习gin框架那么我也是从hello world开始，直接看下面的demo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">func main() &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	r :&#x3D; gin.Default()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	r.GET(&quot;&#x2F;hello&quot;, func(c *gin.Context) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">		c.JSON(http.StatusOK, gin.H&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">			&quot;hello&quot;: &quot;world&quot;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">		&#125;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	&#125;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	r.Run()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-<h2 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h2><p>下面我就从main函数里面的第一行开始分析吧  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">r :&#x3D; gin.Default()</span></pre></td></tr></table></figure>
-<p>从字面意思上理解先初始化个默认的实例，既然有默认的实例那么就有自定义的的实例 （r:=gin.New） ,这边先说说默认的实例。让我们看下Default()函数，下面是Default函数的源代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">func Default() *Engine &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	debugPrintWARNINGDefault()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	engine :&#x3D; New()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	engine.Use(Logger(), Recovery())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	return engine</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-<p>可以看到Default函数中也用到的了New()方法去初始化实例，上面说的自定义实例也用到New()函数，那让我们看看New()里面做了什么</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">func New() *Engine &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	debugPrintWARNINGNew()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	engine :&#x3D; &amp;Engine&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">		RouterGroup: RouterGroup&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">			Handlers: nil,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">			basePath: &quot;&#x2F;&quot;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">			root:     true,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">		&#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">		FuncMap:                template.FuncMap&#123;&#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">		RedirectTrailingSlash:  true,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		RedirectFixedPath:      false,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">		HandleMethodNotAllowed: false,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">		ForwardedByClientIP:    true,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">		AppEngine:              defaultAppEngine,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">		UseRawPath:             false,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">		UnescapePathValues:     true,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">		MaxMultipartMemory:     defaultMultipartMemory,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">		trees:                  make(methodTrees, 0, 9),</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">		delims:                 render.Delims&#123;Left: &quot;&#123;&#123;&quot;, Right: &quot;&#125;&#125;&quot;&#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">		secureJsonPrefix:       &quot;while(1);&quot;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">	engine.RouterGroup.engine &#x3D; engine</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">	engine.pool.New &#x3D; func() interface&#123;&#125; &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">		return engine.allocateContext()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">	return engine</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<p>其实很简单，初始化了个Engine,engine := &amp;Engine{}，Engine是一个结构体,具体属性基本都有注释，打开Engine结构体便知道什么意思<br>Default函数如下行代码，定义了全局的中间件Logger，Recovery。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">engine.Use(Logger(), Recovery())</span></pre></td></tr></table></figure>
-<p>这也是我觉得gin做的比较好的地方，模块化！</p>
-<p>下面几行代码是定义路由和路由对应的handler，Context作为上下文，贯穿整个请求，gin对响应内容格式做了很多处理，JSON，XML，YAML等等</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">r.GET(&quot;&#x2F;hello&quot;, func(c *gin.Context) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">		c.JSON(http.StatusOK, gin.H&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">			&quot;hello&quot;: &quot;world&quot;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">		&#125;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	&#125;)</span></pre></td></tr></table></figure>
-
-<p>最后一行代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">r.Run()</span></pre></td></tr></table></figure>
-<p>启动程序，默认是开启8080端口，也可以自定义端口r.Run(“8088”)<br>,因为gin使用了go原生的net/http包，所以启动也是用http下的http.ListenAndServe(address, engine)函数！</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>从第一行代码到最后一行代码，可以看出gin使用的基本上是go原生net/http包下暴露处出函数和接口，非常的轻量级和简单。而且很方便的自定义中间件也显得gin是个非常灵活的框架。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
+        <div class="article-info info-on-right">
+          
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/gin//" class="article-tag-list-link color4">gin</a>
+        			<a href="/categories/杂文//" class="article-tag-list-link color3">杂文</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/12/19/%E4%BB%8E%E5%8D%95%E5%88%97%E6%A8%A1%E5%BC%8F%E5%AD%A6sync-Onec/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          从单例模式到sync.Once
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/12/16/go-%E7%9A%84%E5%8F%8D%E5%B0%84%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">go 的反射</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  <div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="gin初探" data-title="gin初探" data-url="http://yoursite.com/2019/12/18/gin%E5%88%9D%E6%8E%A2/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -310,8 +225,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
